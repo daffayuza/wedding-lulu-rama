@@ -180,8 +180,9 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 						<h1>Lulu & Rama</h1>
-						<p style="margin-bottom: 0">Kepada Bapak/Ibu/Saudara/i</p>
-						<p>Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami.</p>
+						<p style="margin-bottom: 0" class="test">Kepada Bapak/Ibu/Saudara/i</p>
+						<p style="margin-top: 5px"  id="nama-tamu"></p> 
+						<p style="margin-top: -6px">Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami.</p>
 
 						<button class="btn btn-primary" id="open-invitation">Buka Undangan</button>
 					</div>
@@ -308,7 +309,7 @@
 					</div>
 					<div class="col-md-6 col-sm-6 text-center">
 						<div class="event-wrap animate-box">
-							<h3 style="font-family: 'Oswald', Arial, serif;">Walimatul 'Ursy</h3>
+							<h3 style="font-family: 'Oswald', Arial, serif;">Resepsi</h3>
 							<div class="event-col">
 								<i class="icon-clock"></i>
 								<span>12:00</span>
@@ -340,8 +341,8 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Galeri Foto</h2>
+				<div class="col-md-2 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2 style="margin-top: 10px;">Galeri Foto</h2>
 					<!-- <h3 style="color: #bf9b73">Khitbah Day - 07 November 2021</h3> -->
 				</div>
 			</div>
@@ -595,7 +596,6 @@
 
 			<div id="button-send" class="text-center animate-box">
 				<a href="https://github.com/maulidandev/nikah-rehan-maulidan/issues/new/choose" target="_blank" class="btn btn-primary btn-sm">Kirim Ucapan</a><br>
-				<i style="font-size: 15px">Note : Hanya bisa diisi jika mempunyai akun github. Jika belum ada silahkan daftar terlebih dahulu</i>
 			</div>
 		</div>
 	</div>
@@ -649,8 +649,8 @@
 					<br>
 					<h1 style="font-family: 'Satisfy', Arial, serif">Lulu & Rama</h1>
 					<p>
-						© Copyright 2022 NIKAH DIGITAL All Rights Reserved </br>
-						<small>Instagram : nikahdigitalcom | Whatsapp : (+62) 853-6006-1021 | NikahDigital.com |halo@nikahdigital.com</small>
+						© Copyright 2025 NIkah Digital All Rights Reserved </br>
+						<!-- <small>Instagram : nikahdigitalcom | Whatsapp : (+62) 853-6006-1021 | NikahDigital.com |halo@nikahdigital.com</small> -->
 					<ul class="fh5co-social-icons">
 						<li><a target="_blank" href="https://wa.me/6285360061021/"><i class="icon-phone"></i></a></li>
 						<li><a target="_blank" href="https://nikahdigital.com/"><i class="icon-globe"></i></a></li>
@@ -870,15 +870,15 @@
 		slideDelay: 400,
 		dynamicEl: [
 			{
-				src: 'images/gallery/20211107182627_IMG_5230.jpg-1024x.jpg',
-				thumb: 'images/gallery/20211107182627_IMG_5230.jpg-1024x.jpg',
+				src: 'images/lura-1.jpg',
+				thumb: 'images/lura-1.jpg',
 				/*subHtml: `<div class="lightGallery-captions">
 					<h4>Caption 1</h4>
 					<p>Description of the slide 1</p>
 				</div>`,*/
 			},{
-				src: 'images/gallery/IMG_9958.JPG-1024x.jpg',
-				thumb: 'images/gallery/IMG_9958.JPG-1024x.jpg',
+				src: 'images/lura-2.jpg',
+				thumb: 'images/lura-2.jpg',
 			}
 				/*subHtml: `<div class="lightGallery-captions">
 					<h4>Caption 1</h4>
@@ -939,6 +939,26 @@
 
 	// Since we are using dynamic mode, we need to programmatically open lightGallery
 	inlineGallery.openGallery();
+</script>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const nama = urlParams.get('n') || '';
+    const pronoun = urlParams.get('p') || 'Kepada Bapak/Ibu/Saudara/i,';
+    
+    // Elemen target
+    const namaContainer = document.querySelector('.test');
+    const namaTamuContainer = document.querySelector('#nama-tamu');
+
+    // Atur teks pronoun
+    namaContainer.innerText = pronoun;
+
+    // Jika ada nama, tampilkan di bawah
+    if (nama) {
+        namaTamuContainer.innerText = nama;
+    }
+
+    document.querySelector('#nama').value = nama;
 </script>
 
 </body>
