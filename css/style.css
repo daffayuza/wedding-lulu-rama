@@ -1231,7 +1231,10 @@ form label {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  border: solid white;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
 }
+
 @media screen and (max-width: 480px) {
   .couple-half .groom, .couple-half .bride {
     width: 100%;
