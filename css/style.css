@@ -1059,7 +1059,7 @@ form label {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background: rgba(17, 52, 104, 0.8);
+  background: #113468;
   margin: 0 4px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -2059,7 +2059,7 @@ form label {
 }
 
 .option-btn {
-  background-color: #395f95;
+  background-color: #113468;
   height: 65px;
   width: 65px;
   border-radius: 50%;
@@ -2115,7 +2115,7 @@ form label {
 
 .right-sidebar {
   list-style: none;
-  background-color: #325587;
+  background-color: #113468;
   height: 50px;
   padding: 0 25px 0 35px;
   margin: 0;
@@ -2139,7 +2139,7 @@ form label {
 
 .left-sidebar {
   list-style: none;
-  background-color: #325587;
+  background-color: #113468;
   height: 50px;
   padding: 0 25px 0 35px;
   margin: 0;
